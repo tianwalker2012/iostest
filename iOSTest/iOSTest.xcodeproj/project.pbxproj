@@ -19,6 +19,7 @@
 		18809CBA15313CAD00B7EC6C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18809CB815313CAD00B7EC6C /* InfoPlist.strings */; };
 		18809CBD15313CAD00B7EC6C /* iOSTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18809CBC15313CAD00B7EC6C /* iOSTestTests.m */; };
 		18809CC915313E9600B7EC6C /* EZDrawableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18809CC815313E9600B7EC6C /* EZDrawableView.m */; };
+		18809CD6153174C600B7EC6C /* EZTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18809CD5153174C600B7EC6C /* EZTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		18809CBC15313CAD00B7EC6C /* iOSTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSTestTests.m; sourceTree = "<group>"; };
 		18809CC715313E9600B7EC6C /* EZDrawableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZDrawableView.h; sourceTree = "<group>"; };
 		18809CC815313E9600B7EC6C /* EZDrawableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZDrawableView.m; sourceTree = "<group>"; };
+		18809CD4153174C600B7EC6C /* EZTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZTableViewController.h; sourceTree = "<group>"; };
+		18809CD5153174C600B7EC6C /* EZTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,8 @@
 			children = (
 				18809CC715313E9600B7EC6C /* EZDrawableView.h */,
 				18809CC815313E9600B7EC6C /* EZDrawableView.m */,
+				18809CD4153174C600B7EC6C /* EZTableViewController.h */,
+				18809CD5153174C600B7EC6C /* EZTableViewController.m */,
 			);
 			name = CustomizedView;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 				18809CA415313CAD00B7EC6C /* main.m in Sources */,
 				18809CA815313CAD00B7EC6C /* EZAppDelegate.m in Sources */,
 				18809CC915313E9600B7EC6C /* EZDrawableView.m in Sources */,
+				18809CD6153174C600B7EC6C /* EZTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

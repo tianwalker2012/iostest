@@ -11,29 +11,64 @@
 
 @implementation EZAppDelegate
 
-@synthesize window = _window, child;
+@synthesize window = _window, child, tableView, tableController, myView, myTableController;
+
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    //return [[[data objectAtIndex:section] objectForKey:@"rows"] count];
+    return 100;
+}
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+	cell.textLabel.text = [NSString stringWithFormat:@"Raw %i",[indexPath row]];
+	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+	
+    return cell;
+	
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     EZDrawableView* myView = [[EZDrawableView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.myView = myView;
     myView.backgroundColor = [UIColor yellowColor];
     // Override point for customization after application launch.
     myView.viewName = @"parent";
     [self.window addSubview:myView];
     myView.handler = self;
     
+    
+    //self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(10,10,150, 400) style:UITableViewStyleGrouped];
+    self.tableController = [[EZTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    NSLog(@"Completed");
+    /**
     child = [[EZDrawableView alloc] initWithFrame:CGRectMake(10, 10, 50, 400)]; 
     child.viewName = @"child";
     child.backgroundColor = [UIColor lightGrayColor];
-    [myView addSubview:child];
-    
+    **/
+   
+    NSLog(@"Add to subView");
+    NSLog(@"tableView frame: %@", NSStringFromCGRect(self.tableController.tableView.frame));
+    NSLog(@"Completed add to subView");
+    self.tableController.tableView.delegate = self;
+    self.tableController.tableView.dataSource = self;
+    [myView addSubview:self.tableController.tableView];
     EZDrawableView* button = [[EZDrawableView alloc] initWithFrame:CGRectMake(276, 10, 44, 44)];
     button.viewName = @"button";
     button.backgroundColor = [UIColor lightGrayColor];
     button.handler = self;
     [self.window addSubview:button];
+    [button addSubview:self.tableView];
     
     self.window.backgroundColor = [UIColor grayColor];
     [self.window makeKeyAndVisible];
@@ -83,7 +118,8 @@
     }
     EZDrawableView* touchView = (EZDrawableView*)touchPoint.view;
     if([touchView.viewName isEqualToString:@"button"]){
-        NSLog(@"Child frame is %@", NSStringFromCGRect(child.frame));
+        [self.myView setFrame:CGRectMake(0, 0, 200, 300)];
+        NSLog(@"Child frame is %@", NSStringFromCGRect(self.tableController.tableView.frame));
     }
 }
 

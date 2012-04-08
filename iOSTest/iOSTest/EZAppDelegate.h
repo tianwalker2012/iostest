@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "EZDrawableView.h"
+#import "EZTableViewController.h"
 
-@interface EZAppDelegate : UIResponder <UIApplicationDelegate, TouchHandler>
+@interface EZAppDelegate : UIResponder <UIApplicationDelegate, TouchHandler, UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) EZDrawableView* child;
+@property (strong, nonatomic) UITableView* tableView;
+@property (strong, nonatomic) UITableViewController* tableController;
+@property (strong, nonatomic) EZTableViewController* myTableController;
+@property (strong, nonatomic) EZDrawableView* myView;
 
 @end
