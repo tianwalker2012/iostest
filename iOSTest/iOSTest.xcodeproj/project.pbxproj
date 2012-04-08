@@ -20,6 +20,8 @@
 		18809CBD15313CAD00B7EC6C /* iOSTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18809CBC15313CAD00B7EC6C /* iOSTestTests.m */; };
 		18809CC915313E9600B7EC6C /* EZDrawableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18809CC815313E9600B7EC6C /* EZDrawableView.m */; };
 		18809CD6153174C600B7EC6C /* EZTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18809CD5153174C600B7EC6C /* EZTableViewController.m */; };
+		188ABBD41531C09600E65AE9 /* EZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188ABBD31531C09600E65AE9 /* EZViewController.m */; };
+		188ABBD81531C14E00E65AE9 /* Header.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188ABBD71531C14E00E65AE9 /* Header.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		18809CC815313E9600B7EC6C /* EZDrawableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZDrawableView.m; sourceTree = "<group>"; };
 		18809CD4153174C600B7EC6C /* EZTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZTableViewController.h; sourceTree = "<group>"; };
 		18809CD5153174C600B7EC6C /* EZTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZTableViewController.m; sourceTree = "<group>"; };
+		188ABBD21531C09600E65AE9 /* EZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZViewController.h; sourceTree = "<group>"; };
+		188ABBD31531C09600E65AE9 /* EZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZViewController.m; sourceTree = "<group>"; };
+		188ABBD71531C14E00E65AE9 /* Header.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Header.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +117,7 @@
 		18809C9D15313CAD00B7EC6C /* iOSTest */ = {
 			isa = PBXGroup;
 			children = (
+				188ABBD61531C11800E65AE9 /* nibs */,
 				18809CC615313E6500B7EC6C /* CustomizedView */,
 				18809CA615313CAD00B7EC6C /* EZAppDelegate.h */,
 				18809CA715313CAD00B7EC6C /* EZAppDelegate.m */,
@@ -157,8 +163,18 @@
 				18809CC815313E9600B7EC6C /* EZDrawableView.m */,
 				18809CD4153174C600B7EC6C /* EZTableViewController.h */,
 				18809CD5153174C600B7EC6C /* EZTableViewController.m */,
+				188ABBD21531C09600E65AE9 /* EZViewController.h */,
+				188ABBD31531C09600E65AE9 /* EZViewController.m */,
 			);
 			name = CustomizedView;
+			sourceTree = "<group>";
+		};
+		188ABBD61531C11800E65AE9 /* nibs */ = {
+			isa = PBXGroup;
+			children = (
+				188ABBD71531C14E00E65AE9 /* Header.xib */,
+			);
+			name = nibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18809CA215313CAD00B7EC6C /* InfoPlist.strings in Resources */,
+				188ABBD81531C14E00E65AE9 /* Header.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +288,7 @@
 				18809CA815313CAD00B7EC6C /* EZAppDelegate.m in Sources */,
 				18809CC915313E9600B7EC6C /* EZDrawableView.m in Sources */,
 				18809CD6153174C600B7EC6C /* EZTableViewController.m in Sources */,
+				188ABBD41531C09600E65AE9 /* EZViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +452,7 @@
 				18809CC215313CAD00B7EC6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18809CC315313CAD00B7EC6C /* Build configuration list for PBXNativeTarget "iOSTestTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +461,7 @@
 				18809CC515313CAD00B7EC6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

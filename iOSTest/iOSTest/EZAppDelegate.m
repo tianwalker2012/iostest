@@ -8,10 +8,11 @@
 
 #import "EZAppDelegate.h"
 #import "EZDrawableView.h"
+#import "EZViewController.h"
 
 @implementation EZAppDelegate
 
-@synthesize window = _window, child, tableView, tableController, myView, myTableController;
+@synthesize window = _window, child, tableView, tableController, myView, myTableController, myHeader;
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -41,6 +42,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     EZDrawableView* myView = [[EZDrawableView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.myView = myView;
+    
+    
     myView.backgroundColor = [UIColor yellowColor];
     // Override point for customization after application launch.
     myView.viewName = @"parent";
@@ -63,6 +66,20 @@
     self.tableController.tableView.delegate = self;
     self.tableController.tableView.dataSource = self;
     [myView addSubview:self.tableController.tableView];
+    
+    /**
+    EZDrawableView* header = [[EZDrawableView alloc] initWithFrame:CGRectMake(0, 20, 320, 44)];
+    header.viewName = @"header";
+    header.backgroundColor = [UIColor brownColor];
+    header.handler = self;
+    [myView addSubview:header];
+    header.alpha = 0.5;
+    **/
+    EZViewController* header = [[EZViewController alloc] initWithNibName:@"Header" bundle:nil];
+    header.view.alpha = 0.5;
+    myHeader = header;
+    [myView addSubview:header.view];
+    
     EZDrawableView* button = [[EZDrawableView alloc] initWithFrame:CGRectMake(276, 10, 44, 44)];
     button.viewName = @"button";
     button.backgroundColor = [UIColor lightGrayColor];
