@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EZViewController : UIViewController
+@interface EZViewController : UIViewController<UITabBarDelegate>{
+    IBOutlet UITabBar* tabBar;
+}
 
+@property(strong, nonatomic) UITabBar* tabBar;
 @end

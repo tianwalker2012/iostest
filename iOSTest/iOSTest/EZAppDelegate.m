@@ -9,10 +9,11 @@
 #import "EZAppDelegate.h"
 #import "EZDrawableView.h"
 #import "EZViewController.h"
+#import "EZCompleteController.h"
 
 @implementation EZAppDelegate
 
-@synthesize window = _window, child, tableView, tableController, myView, myTableController, myHeader;
+@synthesize window = _window, child, tableView, tableController, myOwnView, myTableController, myHeader, wholeScreen, allInOne;
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -40,8 +41,8 @@
 {
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    EZDrawableView* myView = [[EZDrawableView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.myView = myView;
+    EZDrawableView* myView = [[EZDrawableView alloc] initWithFrame:CGRectMake(0, 20, 320, 460)];
+    self.myOwnView = myView;
     
     
     myView.backgroundColor = [UIColor yellowColor];
@@ -79,6 +80,19 @@
     header.view.alpha = 0.5;
     myHeader = header;
     [myView addSubview:header.view];
+    
+    EZViewController* tabBar = [[EZViewController alloc] initWithNibName:@"Tabbar" bundle:nil];
+    tabBar.view.alpha = 0.5;
+    [myView addSubview:tabBar.view];
+    
+    /**
+    wholeScreen = [[EZViewController alloc] initWithNibName:@"CompleteView" bundle:nil];
+    wholeScreen.view.alpha =0.5;
+    [myView addSubview:wholeScreen.view];
+    NSLog(@"Pointer for the TabBar is %i",(int)wholeScreen.tabBar);
+    **/
+    allInOne = [[EZCompleteController alloc] initWithNibName:@"WholeScreen" bundle:nil];
+    [myView addSubview:allInOne.view];
     
     EZDrawableView* button = [[EZDrawableView alloc] initWithFrame:CGRectMake(276, 10, 44, 44)];
     button.viewName = @"button";
@@ -135,7 +149,7 @@
     }
     EZDrawableView* touchView = (EZDrawableView*)touchPoint.view;
     if([touchView.viewName isEqualToString:@"button"]){
-        [self.myView setFrame:CGRectMake(0, 0, 200, 300)];
+        [self.myOwnView setFrame:CGRectMake(0, 0, 200, 300)];
         NSLog(@"Child frame is %@", NSStringFromCGRect(self.tableController.tableView.frame));
     }
 }

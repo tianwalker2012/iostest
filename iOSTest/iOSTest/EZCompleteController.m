@@ -1,25 +1,25 @@
 //
-//  EZViewController.m
+//  EZCompleteController.m
 //  iOSTest
 //
-//  Created by Apple on 12-4-8.
+//  Created by Apple on 12-4-9.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import "EZViewController.h"
+#import "EZCompleteController.h"
 
-@interface EZViewController ()
+@interface EZCompleteController ()
 
 @end
 
-@implementation EZViewController
+@implementation EZCompleteController
 @synthesize tabBar;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        NSLog(@"EZViewController get loaded");
+        // Custom initialization
     }
     return self;
 }
@@ -46,7 +46,6 @@
 {
     NSLog(@"The selected Tag is:%i", item.tag);
 }
-
 
 
 @end

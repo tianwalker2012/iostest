@@ -22,6 +22,10 @@
 		18809CD6153174C600B7EC6C /* EZTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18809CD5153174C600B7EC6C /* EZTableViewController.m */; };
 		188ABBD41531C09600E65AE9 /* EZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188ABBD31531C09600E65AE9 /* EZViewController.m */; };
 		188ABBD81531C14E00E65AE9 /* Header.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188ABBD71531C14E00E65AE9 /* Header.xib */; };
+		188ABBDA15328D6D00E65AE9 /* Tabbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188ABBD915328D6D00E65AE9 /* Tabbar.xib */; };
+		188ABBDC153292C200E65AE9 /* CompleteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188ABBDB153292C200E65AE9 /* CompleteView.xib */; };
+		188ABBDF15329C7E00E65AE9 /* EZCompleteController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188ABBDE15329C7E00E65AE9 /* EZCompleteController.m */; };
+		188ABBE115329D2700E65AE9 /* WholeScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188ABBE015329D2700E65AE9 /* WholeScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,11 @@
 		188ABBD21531C09600E65AE9 /* EZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZViewController.h; sourceTree = "<group>"; };
 		188ABBD31531C09600E65AE9 /* EZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZViewController.m; sourceTree = "<group>"; };
 		188ABBD71531C14E00E65AE9 /* Header.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Header.xib; sourceTree = "<group>"; };
+		188ABBD915328D6D00E65AE9 /* Tabbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Tabbar.xib; sourceTree = "<group>"; };
+		188ABBDB153292C200E65AE9 /* CompleteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompleteView.xib; sourceTree = "<group>"; };
+		188ABBDD15329C7E00E65AE9 /* EZCompleteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZCompleteController.h; sourceTree = "<group>"; };
+		188ABBDE15329C7E00E65AE9 /* EZCompleteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZCompleteController.m; sourceTree = "<group>"; };
+		188ABBE015329D2700E65AE9 /* WholeScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WholeScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +174,8 @@
 				18809CD5153174C600B7EC6C /* EZTableViewController.m */,
 				188ABBD21531C09600E65AE9 /* EZViewController.h */,
 				188ABBD31531C09600E65AE9 /* EZViewController.m */,
+				188ABBDD15329C7E00E65AE9 /* EZCompleteController.h */,
+				188ABBDE15329C7E00E65AE9 /* EZCompleteController.m */,
 			);
 			name = CustomizedView;
 			sourceTree = "<group>";
@@ -173,6 +184,9 @@
 			isa = PBXGroup;
 			children = (
 				188ABBD71531C14E00E65AE9 /* Header.xib */,
+				188ABBD915328D6D00E65AE9 /* Tabbar.xib */,
+				188ABBDB153292C200E65AE9 /* CompleteView.xib */,
+				188ABBE015329D2700E65AE9 /* WholeScreen.xib */,
 			);
 			name = nibs;
 			sourceTree = "<group>";
@@ -250,6 +264,9 @@
 			files = (
 				18809CA215313CAD00B7EC6C /* InfoPlist.strings in Resources */,
 				188ABBD81531C14E00E65AE9 /* Header.xib in Resources */,
+				188ABBDA15328D6D00E65AE9 /* Tabbar.xib in Resources */,
+				188ABBDC153292C200E65AE9 /* CompleteView.xib in Resources */,
+				188ABBE115329D2700E65AE9 /* WholeScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +306,7 @@
 				18809CC915313E9600B7EC6C /* EZDrawableView.m in Sources */,
 				18809CD6153174C600B7EC6C /* EZTableViewController.m in Sources */,
 				188ABBD41531C09600E65AE9 /* EZViewController.m in Sources */,
+				188ABBDF15329C7E00E65AE9 /* EZCompleteController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
