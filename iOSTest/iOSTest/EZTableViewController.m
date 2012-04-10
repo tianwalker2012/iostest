@@ -23,6 +23,10 @@
     return self;
 }
 
+- (void)layoutSubviews {
+    //[super layoutSubviews];
+    NSLog(@"layoutSubviews get called, callstack: %@", [NSThread callStackSymbols]);
+}
 
 - (void) loadView {
     //NSLog(@"Before super called, frame:%@",NSStringFromCGRect(self.tableView.frame));

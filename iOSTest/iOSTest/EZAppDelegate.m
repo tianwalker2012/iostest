@@ -67,7 +67,10 @@
     self.tableController.tableView.delegate = self;
     self.tableController.tableView.dataSource = self;
     [myView addSubview:self.tableController.tableView];
-    
+    //[UIApplication sharedApplication];
+    NSString* appRectStr = NSStringFromCGRect([[UIScreen mainScreen] applicationFrame]);
+    NSString* wholeScreen = NSStringFromCGRect([[UIScreen mainScreen] bounds]);
+    NSLog(@"ApplicationFrame:%@, Full screen Frame:%@",appRectStr, wholeScreen);
     /**
     EZDrawableView* header = [[EZDrawableView alloc] initWithFrame:CGRectMake(0, 20, 320, 44)];
     header.viewName = @"header";
@@ -81,19 +84,21 @@
     myHeader = header;
     [myView addSubview:header.view];
     
+    /**
     EZViewController* tabBar = [[EZViewController alloc] initWithNibName:@"Tabbar" bundle:nil];
     tabBar.view.alpha = 0.5;
     [myView addSubview:tabBar.view];
-    
+    **/
     /**
     wholeScreen = [[EZViewController alloc] initWithNibName:@"CompleteView" bundle:nil];
     wholeScreen.view.alpha =0.5;
     [myView addSubview:wholeScreen.view];
     NSLog(@"Pointer for the TabBar is %i",(int)wholeScreen.tabBar);
     **/
+    /**
     allInOne = [[EZCompleteController alloc] initWithNibName:@"WholeScreen" bundle:nil];
     [myView addSubview:allInOne.view];
-    
+    **/
     EZDrawableView* button = [[EZDrawableView alloc] initWithFrame:CGRectMake(276, 10, 44, 44)];
     button.viewName = @"button";
     button.backgroundColor = [UIColor lightGrayColor];
@@ -104,7 +109,9 @@
     self.window.backgroundColor = [UIColor grayColor];
     [self.window makeKeyAndVisible];
     
-    //[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:NO];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:NO];
+    appRectStr = NSStringFromCGRect([[UIScreen mainScreen] applicationFrame]);
+    NSLog(@"After status bar hidded, App Frame:%@",appRectStr);
     return YES;
 }
 
@@ -151,6 +158,8 @@
     if([touchView.viewName isEqualToString:@"button"]){
         [self.myOwnView setFrame:CGRectMake(0, 0, 200, 300)];
         NSLog(@"Child frame is %@", NSStringFromCGRect(self.tableController.tableView.frame));
+        NSString* appRectStr = NSStringFromCGRect([[UIScreen mainScreen] applicationFrame]);
+        NSLog(@"After status bar hidded, App Frame:%@",appRectStr);
     }
 }
 
